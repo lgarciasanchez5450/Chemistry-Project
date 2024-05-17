@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":1,
+    "period":1,
+    "symbol":"H",
+    "family":"",
+    "fullName":"Hydrogen",
+    "AtomicNumber":1,
+    "AtomicMass":1.008,
+    "MeltingPointKelvin":13.99,
+    "BoilingPointKelvin": 20.271,
+    "CommonUses":"Common Uses: H Bombs",
+    "Description":"This is the Description for Hydrogen"
+}

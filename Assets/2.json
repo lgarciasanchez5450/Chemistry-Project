@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[145,100,145],
+    "textColor":[255,255,255],
+
+    "group":18,
+    "period":1,
+    "symbol":"He",
+    "family":"Noble Gases",
+    "fullName":"Helium",
+    "AtomicNumber":2,
+    "AtomicMass":4.003,
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin":4.222,
+    "CommonUses":"Used in blah, and blah",
+    "Description":"Long Description"
+}
