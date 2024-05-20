@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":2,
+    "period":2,
+    "symbol":"Be",
+    "family":"Alkaline Earth Metals",
+    "fullName":"Beryllium",
+    "AtomicNumber":4,
+    "AtomicMass":9.0122,
+    "MeltingPointKelvin":1,560,
+    "BoilingPointKelvin": 2,743,
+    "CommonUses":"",
+    "Description":""
+}
