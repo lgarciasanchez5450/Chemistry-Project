@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":13,
+    "period":2,
+    "symbol":"B",
+    "family":"Metalloids",
+    "fullName":"Boron",
+    "AtomicNumber":5,
+    "AtomicMass":10.81,
+    "MeltingPointKelvin":2,348,
+    "BoilingPointKelvin": 4,273,
+    "CommonUses":"",
+    "Description":""
+}
