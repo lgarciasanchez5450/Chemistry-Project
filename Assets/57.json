@@ -9,8 +9,8 @@
     "fullName":"Lanthanum",
     "AtomicNumber":57,
     "AtomicMass":138.905,
-    "MeltingPointKelvin":1193.0,
-    "BoilingPointKelvin": 3737.0,
+    "MeltingPointKelvin":"1,193",
+    "BoilingPointKelvin": "3,737",
     "CommonUses":"Commonly used in many alloys to store hydrogen gas for vehicles. ",
     "Description":"Discovered by Carl Gustav Mosander in the year 1839. Lanthanum appears as a soft and silvery-white metal..."
 }
