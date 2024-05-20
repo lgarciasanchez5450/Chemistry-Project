@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":8,
+    "period":7,
+    "symbol":"Hs",
+    "family":"Transition Metals",
+    "fullName":"Hassium",
+    "AtomicNumber":108,
+    "AtomicMass":"(277)",
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
 }
