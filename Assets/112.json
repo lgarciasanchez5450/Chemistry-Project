@@ -2,15 +2,15 @@
     "backgroundColor":[100,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
+    "group":12,
+    "period":7,
+    "symbol":"Cn",
     "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "fullName":"Copernicium",
+    "AtomicNumber":112,
+    "AtomicMass":"(285)",
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
 }
