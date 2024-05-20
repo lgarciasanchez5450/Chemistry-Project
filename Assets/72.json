@@ -1,1 +1,16 @@
+{
+    "backgroundColor":[175,20,50], 
+    "textColor":[255,255,255],
 
+    "group":4,
+    "period":6,
+    "symbol":"Hf",
+    "family":"Transition Metals",
+    "fullName":"Halfnium",
+    "AtomicNumber":72,
+    "AtomicMass":178.49,
+    "MeltingPointKelvin":"2,506",
+    "BoilingPointKelvin": "4,876",
+    "CommonUses":"",
+    "Description":""
+}
