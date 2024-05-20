@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":12,
+    "period":5,
+    "symbol":"Cd",
+    "family":"Transition Metals",
+    "fullName":"Cadmium",
+    "AtomicNumber":48,
+    "AtomicMass":112.41,
+    "MeltingPointKelvin":594.22,
+    "BoilingPointKelvin": "1,040",
     "CommonUses":"",
     "Description":""
 }
