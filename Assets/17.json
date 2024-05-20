@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[100,180,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":17,
+    "period":3,
+    "symbol":"Cl",
+    "family":"Reactive Nonmetals",
+    "fullName":"Chlorine",
+    "AtomicNumber":17,
+    "AtomicMass":35.45,
+    "MeltingPointKelvin":171.6,
+    "BoilingPointKelvin": 239.11,
     "CommonUses":"",
-    "Description":""
+    "Description":"Halogen, "
 }
