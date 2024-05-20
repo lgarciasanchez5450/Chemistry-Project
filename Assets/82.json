@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":14,
+    "period":6,
+    "symbol":"Pb",
+    "family":"Post-Transition/Other Metals",
+    "fullName":"Lead",
+    "AtomicNumber":82,
+    "AtomicMass":207.2,
+    "MeltingPointKelvin":600.61,
+    "BoilingPointKelvin": "2,022",
     "CommonUses":"",
     "Description":""
 }
