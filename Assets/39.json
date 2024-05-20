@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":3,
+    "period":5,
+    "symbol":"Y",
+    "family":"Transition Metals",
+    "fullName":"Yttrium",
+    "AtomicNumber":39,
+    "AtomicMass":88.906,
+    "MeltingPointKelvin":"1,799",
+    "BoilingPointKelvin": "3,618",
     "CommonUses":"",
     "Description":""
 }
