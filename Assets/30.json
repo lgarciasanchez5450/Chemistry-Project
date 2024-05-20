@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":12,
+    "period":4,
+    "symbol":"Zn",
+    "family":"Transition Metals",
+    "fullName":"Zinc",
+    "AtomicNumber":30,
+    "AtomicMass":65.38,
+    "MeltingPointKelvin":692.68,
+    "BoilingPointKelvin": "1,180",
     "CommonUses":"",
     "Description":""
 }
