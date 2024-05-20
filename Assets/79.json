@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":11,
+    "period":6,
+    "symbol":"Au",
+    "family":"Transition Metals",
+    "fullName":"Gold",
+    "AtomicNumber":79,
+    "AtomicMass":196.97,
+    "MeltingPointKelvin":"1,337.33",
+    "BoilingPointKelvin": "3,129",
     "CommonUses":"",
     "Description":""
 }
