@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":9,
+    "period":6,
+    "symbol":"Ir",
+    "family":"Transition Metals",
+    "fullName":"Iridium",
+    "AtomicNumber":77,
+    "AtomicMass":192.22,
+    "MeltingPointKelvin":"2,739",
+    "BoilingPointKelvin": "4,701",
     "CommonUses":"",
     "Description":""
 }
