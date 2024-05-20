@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,0,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":15,
+    "period":5,
+    "symbol":"Sb",
+    "family":"Metalloids/Semi-Metals",
+    "fullName":"Antimony",
+    "AtomicNumber":51,
+    "AtomicMass":121.76,
+    "MeltingPointKelvin":903.78,
+    "BoilingPointKelvin": "1,860",
     "CommonUses":"",
     "Description":""
 }
