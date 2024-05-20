@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":5,
+    "period":4,
+    "symbol":"V",
+    "family":"Transition Metals",
+    "fullName":"Vanadium",
+    "AtomicNumber":23,
+    "AtomicMass":50.942,
+    "MeltingPointKelvin":"2,183",
+    "BoilingPointKelvin": "3,680",
     "CommonUses":"",
     "Description":""
 }
