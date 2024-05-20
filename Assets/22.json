@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":4,
+    "period":4,
+    "symbol":"Ti",
+    "family":"Transition Metals",
+    "fullName":"Titanium",
+    "AtomicNumber":22,
+    "AtomicMass":47.876,
+    "MeltingPointKelvin":"1,941",
+    "BoilingPointKelvin": "3,560",
     "CommonUses":"",
     "Description":""
 }
