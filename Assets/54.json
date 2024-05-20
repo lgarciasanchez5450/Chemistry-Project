@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[150,75,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":18,
+    "period":5,
+    "symbol":"Xe",
+    "family":"Noble Gases",
+    "fullName":"Xenon",
+    "AtomicNumber":54,
+    "AtomicMass":131.29,
+    "MeltingPointKelvin":161.3,
+    "BoilingPointKelvin": 165.1,
     "CommonUses":"",
     "Description":""
 }
