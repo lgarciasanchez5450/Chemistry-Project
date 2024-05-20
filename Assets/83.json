@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":15,
+    "period":6,
+    "symbol":"Bi",
+    "family":"Post-Transition/Other Metals",
+    "fullName":"Bismuth",
+    "AtomicNumber":83,
+    "AtomicMass":208.98,
+    "MeltingPointKelvin":544.4,
+    "BoilingPointKelvin": "1,837",
     "CommonUses":"",
-    "Description":""
+    "Description":"Pnictogen, "
 }
