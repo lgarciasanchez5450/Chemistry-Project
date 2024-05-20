@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,0,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":14,
+    "period":4,
+    "symbol":"Ge",
+    "family":"Metalloids/Semi-Metals",
+    "fullName":"Germanium",
+    "AtomicNumber":32,
+    "AtomicMass":72.630,
+    "MeltingPointKelvin":"1,211.4",
+    "BoilingPointKelvin": "3,093",
     "CommonUses":"",
     "Description":""
 }
