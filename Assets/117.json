@@ -2,15 +2,15 @@
     "backgroundColor":[100,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
+    "group":17,
+    "period":7,
+    "symbol":"Ts",
     "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "fullName":"Tennessine",
+    "AtomicNumber":117,
+    "AtomicMass":"(294)",
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
 }
