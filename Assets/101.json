@@ -9,7 +9,7 @@
     "fullName":"Mendelevium",
     "AtomicNumber":101,
     "AtomicMass":"(258)",
-    "MeltingPointKelvin":1,100,
+    "MeltingPointKelvin":"1,100",
     "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
