@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":7,
+    "period":6,
+    "symbol":"Re",
+    "family":"Transition Metals",
+    "fullName":"Rhenium",
+    "AtomicNumber":75,
+    "AtomicMass":186.21,
+    "MeltingPointKelvin":"3,459",
+    "BoilingPointKelvin": "5,868",
     "CommonUses":"",
     "Description":""
 }
