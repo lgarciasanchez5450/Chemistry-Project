@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":8,
+    "period":6,
+    "symbol":"Os",
+    "family":"Transition Metals",
+    "fullName":"Osmium",
+    "AtomicNumber":76,
+    "AtomicMass":190.23,
+    "MeltingPointKelvin":"3,306",
+    "BoilingPointKelvin": "5,285",
     "CommonUses":"",
     "Description":""
 }
