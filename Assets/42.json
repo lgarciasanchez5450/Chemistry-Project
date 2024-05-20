@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":6,
+    "period":5,
+    "symbol":"Mo",
+    "family":"Transition Metals",
+    "fullName":"Molybdenum",
+    "AtomicNumber":42,
+    "AtomicMass":95.95,
+    "MeltingPointKelvin":"2,896",
+    "BoilingPointKelvin": "4,912",
     "CommonUses":"",
     "Description":""
 }
