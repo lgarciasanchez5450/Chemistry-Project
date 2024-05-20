@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":6,
+    "period":7,
+    "symbol":"Sg",
+    "family":"Transition Metals",
+    "fullName":"Seaborgium",
+    "AtomicNumber":106,
+    "AtomicMass":"(269)",
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
 }
