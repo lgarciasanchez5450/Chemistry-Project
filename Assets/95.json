@@ -2,15 +2,16 @@
     "backgroundColor":[100,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":"Actinides",
+    "period":7,
+    "symbol":"Am",
+    "family":"Actinides",
+    "fullName":"Americium",
+    "AtomicNumber":95,
+    "AtomicMass":"(243)",
+    "MeltingPointKelvin":"1,449",
+    "BoilingPointKelvin": "2,284",
     "CommonUses":"",
     "Description":""
 }
+
