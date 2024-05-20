@@ -1,1 +1,16 @@
+{
+    "backgroundColor":[0,100,150], 
+    "textColor":[255,255,255],
 
+    "group":13,
+    "period":3,
+    "symbol":"Al",
+    "family":"Post-Transition/Other Metals",
+    "fullName":"Aluminum",
+    "AtomicNumber":13,
+    "AtomicMass":26.982,
+    "MeltingPointKelvin":575,
+    "BoilingPointKelvin": 623,
+    "CommonUses":"",
+    "Description":""
+}
