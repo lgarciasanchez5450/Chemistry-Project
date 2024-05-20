@@ -9,8 +9,8 @@
     "fullName":"Proactinium",
     "AtomicNumber":91,
     "AtomicMass":231.04,
-    "MeltingPointKelvin":1,845,
-    "BoilingPointKelvin": 4,273,
+    "MeltingPointKelvin":"1,845",
+    "BoilingPointKelvin": "4,273",
     "CommonUses":"",
     "Description":""
 }
