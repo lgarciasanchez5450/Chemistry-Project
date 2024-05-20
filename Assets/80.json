@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":12,
+    "period":6,
+    "symbol":"Hg",
+    "family":"Transition Metals",
+    "fullName":"Mercury",
+    "AtomicNumber":80,
+    "AtomicMass":200.59,
+    "MeltingPointKelvin":234.32,
+    "BoilingPointKelvin": 629.88,
     "CommonUses":"",
     "Description":""
 }
