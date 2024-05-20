@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":14,
+    "period":2,
+    "symbol":"C",
+    "family":"Reactive Nonmetals",
+    "fullName":"Carbon",
+    "AtomicNumber":6,
+    "AtomicMass":12.011,
+    "MeltingPointKelvin":3,915,
+    "BoilingPointKelvin": 3,915,
+    "CommonUses":"",
+    "Description":""
+}
