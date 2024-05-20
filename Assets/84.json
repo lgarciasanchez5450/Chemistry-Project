@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":16,
+    "period":6,
+    "symbol":"Po",
+    "family":"Post-Transition/Other Metals",
+    "fullName":"Polonium",
+    "AtomicNumber":84,
+    "AtomicMass":"(209)",
+    "MeltingPointKelvin":528,
+    "BoilingPointKelvin": "1,235",
     "CommonUses":"",
-    "Description":""
+    "Description":"Chalcogen, "
 }
