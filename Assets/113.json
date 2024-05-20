@@ -2,15 +2,15 @@
     "backgroundColor":[100,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
+    "group":13,
+    "period":7,
+    "symbol":"Nh",
     "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "fullName":"Nihonium",
+    "AtomicNumber":113,
+    "AtomicMass":"(286)",
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
 }
