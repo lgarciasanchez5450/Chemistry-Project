@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":7,
+    "period":5,
+    "symbol":"Tc",
+    "family":"Transition Metals",
+    "fullName":"Technetium",
+    "AtomicNumber":43,
+    "AtomicMass":"(98)",
+    "MeltingPointKelvin":"2,430",
+    "BoilingPointKelvin": "4,538",
     "CommonUses":"",
-    "Description":""
+    "Description":"radioactive"
 }
