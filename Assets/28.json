@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":10,
+    "period":4,
+    "symbol":"Ni",
+    "family":"Transition Metals",
+    "fullName":"Nickel",
+    "AtomicNumber":28,
+    "AtomicMass":58.693,
+    "MeltingPointKelvin":"1,728",
+    "BoilingPointKelvin": "3,186",
     "CommonUses":"",
     "Description":""
 }
