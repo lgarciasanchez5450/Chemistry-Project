@@ -2,15 +2,15 @@
     "backgroundColor":[100,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
+    "group":16,
+    "period":7,
+    "symbol":"Lv",
     "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "fullName":"Livermorium",
+    "AtomicNumber":116,
+    "AtomicMass":"(293)",
+    "MeltingPointKelvin":"Unknown",
+    "BoilingPointKelvin": "Unknown",
     "CommonUses":"",
     "Description":""
 }
