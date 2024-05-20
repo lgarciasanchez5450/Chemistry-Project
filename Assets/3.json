@@ -1,5 +1,5 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[150,100,50], 
     "textColor":[255,255,255],
     "imagePath":"Assets/Images/lithium.png",
     "group":1,
