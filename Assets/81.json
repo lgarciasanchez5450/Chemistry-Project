@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":13,
+    "period":6,
+    "symbol":"Tl",
+    "family":"Post-Transition/Other Metals",
+    "fullName":"Thallium",
+    "AtomicNumber":81,
+    "AtomicMass":204.38,
+    "MeltingPointKelvin":577,
+    "BoilingPointKelvin": "1,746",
     "CommonUses":"",
     "Description":""
 }
