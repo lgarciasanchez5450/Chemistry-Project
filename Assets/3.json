@@ -5,12 +5,12 @@
     "group":1,
     "period":2,
     "symbol":"Li",
-    "family":"Alkali Metal",
+    "family":"Alkali Metals",
     "fullName":"Lithium",
     "AtomicNumber":3,
     "AtomicMass":6.94,
     "MeltingPointKelvin":453.69,
-    "BoilingPointKelvin": 1,615,
+    "BoilingPointKelvin": "1,615",
     "CommonUses":"",
     "Description":""
 }
