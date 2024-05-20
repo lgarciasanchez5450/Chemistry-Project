@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":11,
+    "period":4,
+    "symbol":"Cu",
+    "family":"Transition Metals",
+    "fullName":"Copper",
+    "AtomicNumber":29,
+    "AtomicMass":63.546,
+    "MeltingPointKelvin":"1,357.77",
+    "BoilingPointKelvin": "2,835",
     "CommonUses":"",
     "Description":""
 }
