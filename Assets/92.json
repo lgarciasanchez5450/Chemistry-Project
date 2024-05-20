@@ -9,8 +9,8 @@
     "fullName":"Uranium",
     "AtomicNumber":92,
     "AtomicMass":238.03,
-    "MeltingPointKelvin":1,408,
-    "BoilingPointKelvin": 4,200,
+    "MeltingPointKelvin":"1,408",
+    "BoilingPointKelvin": "4,200",
     "CommonUses":"",
     "Description":""
 }
