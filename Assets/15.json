@@ -1,1 +1,16 @@
+{
+    "backgroundColor":[0,100,150], 
+    "textColor":[255,255,255],
 
+    "group":15,
+    "period":3,
+    "symbol":"P",
+    "family":"Reactive Nonmetals",
+    "fullName":"Phosphorus",
+    "AtomicNumber":15,
+    "AtomicMass":30.974,
+    "MeltingPointKelvin":317.3,
+    "BoilingPointKelvin": 553.6,
+    "CommonUses":"",
+    "Description":"Pnictogen, "
+}
