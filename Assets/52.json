@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,0,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":16,
+    "period":5,
+    "symbol":"Te",
+    "family":"Metalloids/Semi-Metals",
+    "fullName":"Tellerium",
+    "AtomicNumber":52,
+    "AtomicMass":127.60,
+    "MeltingPointKelvin":722.66,
+    "BoilingPointKelvin": "1,261",
     "CommonUses":"",
-    "Description":""
+    "Description":"Chalcogen, "
 }
