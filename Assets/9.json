@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":17,
+    "period":2,
+    "symbol":"F",
+    "family":"Reactive Nonmetals",
+    "fullName":"Flourine",
+    "AtomicNumber":9,
+    "AtomicMass":18.998,
+    "MeltingPointKelvin":53.5,
+    "BoilingPointKelvin": 85.03,
+    "CommonUses":"",
+    "Description":"Halogen, "
+}
