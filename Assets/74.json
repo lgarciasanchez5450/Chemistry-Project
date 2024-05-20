@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":6,
+    "period":6,
+    "symbol":"W",
+    "family":"Transition Metals",
+    "fullName":"Tungsten",
+    "AtomicNumber":74,
+    "AtomicMass":183.84,
+    "MeltingPointKelvin":"3,695",
+    "BoilingPointKelvin": "5,828",
     "CommonUses":"",
     "Description":""
 }
