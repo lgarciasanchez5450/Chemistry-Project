@@ -1,1 +1,17 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":1,
+    "period":4,
+    "symbol":"K",
+    "family":"Alkali Metals",
+    "fullName":"Potassium",
+    "AtomicNumber":19,
+    "AtomicMass":39.098,
+    "MeltingPointKelvin":336.53,
+    "BoilingPointKelvin":"1,032",
+    "CommonUses":"",
+    "Description":""
+}
 
