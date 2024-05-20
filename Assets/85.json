@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,0,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":17,
+    "period":6,
+    "symbol":"At",
+    "family":"Metalloids/Semi-Metals",
+    "fullName":"Astatine",
+    "AtomicNumber":85,
+    "AtomicMass":"(210)",
+    "MeltingPointKelvin":575,
+    "BoilingPointKelvin": 623,
     "CommonUses":"",
-    "Description":""
+    "Description":"Halogen, "
 }
