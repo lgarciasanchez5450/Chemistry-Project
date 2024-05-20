@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,100,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":13,
+    "period":5,
+    "symbol":"In",
+    "family":"Post-Transition/Other Metals",
+    "fullName":"Indium",
+    "AtomicNumber":49,
+    "AtomicMass":114.82,
+    "MeltingPointKelvin":429.75,
+    "BoilingPointKelvin": "2,345",
     "CommonUses":"",
     "Description":""
 }
