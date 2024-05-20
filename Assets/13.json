@@ -9,8 +9,8 @@
     "fullName":"Aluminum",
     "AtomicNumber":13,
     "AtomicMass":26.982,
-    "MeltingPointKelvin":575,
-    "BoilingPointKelvin": 623,
+    "MeltingPointKelvin":933.47,
+    "BoilingPointKelvin": "2,792",
     "CommonUses":"",
     "Description":""
 }
