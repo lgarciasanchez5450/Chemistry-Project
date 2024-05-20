@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[100,180,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":,17
+    "period":5,
+    "symbol":"I",
+    "family":"Reactive Nonmetals",
+    "fullName":"Iodine",
+    "AtomicNumber":53,
+    "AtomicMass":126.90,
+    "MeltingPointKelvin":386.85,
+    "BoilingPointKelvin": 457.4,
     "CommonUses":"",
-    "Description":""
+    "Description":"ogen, "
 }
