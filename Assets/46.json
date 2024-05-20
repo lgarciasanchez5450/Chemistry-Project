@@ -3,8 +3,8 @@
     "textColor":[255,255,255],
 
     "group":10,
-    "period":,5
-    "symbol":""Pd,
+    "period":5,
+    "symbol":"Pd",
     "family":"Transition Metals",
     "fullName":"Palladium",
     "AtomicNumber":46,

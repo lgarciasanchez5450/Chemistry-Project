@@ -9,8 +9,8 @@
     "fullName":"Beryllium",
     "AtomicNumber":4,
     "AtomicMass":9.0122,
-    "MeltingPointKelvin":1,560,
-    "BoilingPointKelvin": 2,743,
+    "MeltingPointKelvin":"1,560",
+    "BoilingPointKelvin": "2,743",
     "CommonUses":"",
     "Description":""
 }

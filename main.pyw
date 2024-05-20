@@ -64,7 +64,10 @@ for element in dataLoader.getAllElementsData():
         else:
             col = 0
             raise RuntimeError()
-    ptable.addButton((col-1,row-1),b)
+    try:
+        ptable.addButton((col-1,row-1),b)
+    except:
+        pass
 
 c = resizeSurfaceSmooth(loadImg('./Assets/Images/info-button.png',True,False),(40,40))
 window_space.left.credits = RoundButton((25,framework.HEIGHT-25),18,lambda :0,color.dark_light_grey,color.dark_light_grey,color.light_grey,c,-20,-20,OnUpCommand=lambda :(window_space.setActiveMainSpace(1-window_space._activeMainSpace)))

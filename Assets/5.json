@@ -9,8 +9,8 @@
     "fullName":"Boron",
     "AtomicNumber":5,
     "AtomicMass":10.81,
-    "MeltingPointKelvin":2,348,
-    "BoilingPointKelvin": 4,273,
+    "MeltingPointKelvin":2348,
+    "BoilingPointKelvin": 4273,
     "CommonUses":"",
     "Description":""
 }

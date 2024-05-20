@@ -41,8 +41,11 @@ def getAllElementsData() -> list[ElementData]:
     for path,_dirs,files in os.walk(DATA_FOLDER):
         for file in files:
             if file.endswith('.json'):
-               with open(path+"/"+file) as file:
-                    element = ElementData(json.load(file))
+               with open(path+"/"+file) as f:
+                    try:
+                        element = ElementData(json.load(f))
+                    except:
+                        print(file)
                     data.append(element)
     return data
 
