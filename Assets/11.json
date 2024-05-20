@@ -1,1 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
 
+    "group":1,
+    "period":3,
+    "symbol":"Na",
+    "family":"Alkali Metals",
+    "fullName":"Sodium",
+    "AtomicNumber":11,
+    "AtomicMass":22.990,
+    "MeltingPointKelvin":370.87,
+    "BoilingPointKelvin":"1,156",
+    "CommonUses":"",
+    "Description":""
+}
