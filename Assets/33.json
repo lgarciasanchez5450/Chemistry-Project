@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,0,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":15,
+    "period":4,
+    "symbol":"As",
+    "family":"Metalloids/Semi-Metals",
+    "fullName":"Arsenic",
+    "AtomicNumber":33,
+    "AtomicMass":74.922,
+    "MeltingPointKelvin":"1,090",
+    "BoilingPointKelvin": 887,
     "CommonUses":"",
     "Description":""
 }
