@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":8,
+    "period":5,
+    "symbol":"Ru",
+    "family":"Transition Metals",
+    "fullName":"Ruthenium",
+    "AtomicNumber":44,
+    "AtomicMass":101.07,
+    "MeltingPointKelvin":"2,607",
+    "BoilingPointKelvin": "4,423",
     "CommonUses":"",
     "Description":""
 }
