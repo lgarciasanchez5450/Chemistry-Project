@@ -1,1 +1,16 @@
+{
+    "backgroundColor":[150,75,150], 
+    "textColor":[255,255,255],
 
+    "group":18,
+    "period":3,
+    "symbol":"Ar",
+    "family":"Noble Gases",
+    "fullName":"Argon",
+    "AtomicNumber":18,
+    "AtomicMass":39.948,
+    "MeltingPointKelvin":83.8,
+    "BoilingPointKelvin": 87.3,
+    "CommonUses":"",
+    "Description":""
+}
