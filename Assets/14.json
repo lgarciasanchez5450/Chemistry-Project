@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[0,0,150], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":14,
+    "period":3,
+    "symbol":"Si",
+    "family":"Metalloids/Semi-Metals",
+    "fullName":"Silicon",
+    "AtomicNumber":14,
+    "AtomicMass":28.085,
+    "MeltingPointKelvin":"1,687",
+    "BoilingPointKelvin": "3,173",
     "CommonUses":"",
     "Description":""
 }
