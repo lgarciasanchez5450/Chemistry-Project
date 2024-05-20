@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[175,20,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":5,
+    "period":6,
+    "symbol":"Ta",
+    "family":"Transition Metals",
+    "fullName":"Tantalum",
+    "AtomicNumber":73,
+    "AtomicMass":180.95,
+    "MeltingPointKelvin":"3,290",
+    "BoilingPointKelvin": "5,731",
     "CommonUses":"",
     "Description":""
 }
