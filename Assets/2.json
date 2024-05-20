@@ -11,6 +11,6 @@
     "AtomicMass":4.003,
     "MeltingPointKelvin":"Unknown",
     "BoilingPointKelvin":4.222,
-    "CommonUses":"Used in blah, and blah",
-    "Description":"Long Description"
+    "CommonUses":"",
+    "Description":""
 }
