@@ -1,16 +1,16 @@
 {
-    "backgroundColor":[100,100,150], 
+    "backgroundColor":[100,180,50], 
     "textColor":[255,255,255],
 
-    "group":,
-    "period":,
-    "symbol":"",
-    "family":"",
-    "fullName":"",
-    "AtomicNumber":,
-    "AtomicMass":,
-    "MeltingPointKelvin":,
-    "BoilingPointKelvin": ,
+    "group":16,
+    "period":3,
+    "symbol":"S",
+    "family":"Reactive Nonmetals",
+    "fullName":"Sulfur",
+    "AtomicNumber":16,
+    "AtomicMass":32.06,
+    "MeltingPointKelvin":388.36,
+    "BoilingPointKelvin": 717.87,
     "CommonUses":"",
-    "Description":""
+    "Description":"Chalcogen, "
 }
