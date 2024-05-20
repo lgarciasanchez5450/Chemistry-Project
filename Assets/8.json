@@ -1,0 +1,16 @@
+{
+    "backgroundColor":[100,100,150], 
+    "textColor":[255,255,255],
+
+    "group":16,
+    "period":2,
+    "symbol":"O",
+    "family":"Reactive Nonmetals",
+    "fullName":"Oxygen",
+    "AtomicNumber":8,
+    "AtomicMass":15.999,
+    "MeltingPointKelvin":54.8,
+    "BoilingPointKelvin": 90.2,
+    "CommonUses":"",
+    "Description":""
+}
