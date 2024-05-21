@@ -8,7 +8,7 @@ Notes Application (trashy)
 '''
 # speedup by making <accepts> classmethod into an attribute because its almost four times as fast to access.!!! TODO TODO TODO TODO TODO
 import threading, time
-import colorsys as _colorsys
+from typing import Callable,Any
 from pygame import gfxdraw
 from math import sqrt, cos, sin, hypot,atan2,pi,acos,e,exp
 from pygame import mixer
@@ -42,13 +42,8 @@ def arccos(x):
 def rgb_to_hsv(r,g,b): 
   M = max(r, g, b)
   m = min(r, g, b)
-
-  #And then V and S are defined by the equations
-
   V = M/255
   S = 1 - m/M  if M > 0 else 0
-
-  #As in the HSI and HSL color schemes, the hue H is defined by the equations
   d = sqrt(r*r+g*g+b*b-r*g-r*b-g*b)
   H = arccos((r - g/2 - b/2)/d)  if g >= b else 360 - arccos( (r - g/2 - b/2)/d)  
   return H/360,S,V
@@ -57,37 +52,29 @@ def hsv_to_rgb(h,s,v):
   h *= 360
   M = 255*v
   m = M*(1-s)
-
   #Now compute another number, z, defined by the equation
-
   z = (M-m)*(1-abs((h/60)%2-1))
-
   #Now you can compute R, G, and B according to the angle measure of H. There are six cases. 
   if 0 <= h < 60:
     R = M
     G = z + m
     B = m
-
   elif 60 <= h < 120:
     R = z + m
     G = M
     B = m
-
   elif 120 <= h < 180:
     R = m
     G = M
     B = z + m
-
   elif 180 <= h < 240:
     R = m
     G = z + m
     B = M
-
   elif 240 <= h < 300:
     R = z + m
     G = m
     B = M
-
   elif 300 <= h <= 360:
     R = M
     G = m
@@ -247,10 +234,7 @@ def py_line(surface, color, start_pos, end_pos, width=1):
 class SoundError(BaseException):
   '''Error with pygame.mixer.music module'''
   pass
-class function:
-  '''A function or method'''
-  #Just a class to increase readability
-  pass
+
 
 class Input:
   '''
@@ -1093,7 +1077,7 @@ class CheckBox:
   def accepts(cls) -> tuple:
     return ('mpos','mb1down')
   __slots__ = ('pos','size','func','_rect','_offSetPos','box_color','font','txt','tpos','_selected','onlyOn')
-  def __init__(self,pos:tuple,size:number,func:function,box_color:tuple = (110,110,110),txt:str = '',font = None,tpos = (20,0),onlyOn:bool = False) -> None:
+  def __init__(self,pos:tuple,size:number,func:Callable[[bool],Any],box_color:tuple = (110,110,110),txt:str = '',font = None,tpos = (20,0),onlyOn:bool = False) -> None:
     self.onlyOn = onlyOn
     self.pos = pos
     self.size = (size,size)
@@ -1159,7 +1143,7 @@ class KeyBoundFunction:
     return ('KDQueue',)
   
   __slots__ = ('func','keys','offSetPos')
-  def __init__(self,func:function,*keys):
+  def __init__(self,func:Callable[[],Any],*keys:str):
     self.func = func
     self.keys = set(keys)
 
@@ -1201,7 +1185,7 @@ class Button:
   def accepts(cls) -> tuple:
     return ('mpos','mb1down','mb3down','KDQueue','mb1up')
   #__slots__ = ('x','y','xlen','ylen','OnDownCommand','OnUpCommand','down_color','up_color','down','previous_state','idle_color','text','textx','texty','idle','state','key','text_color','accepts_mb3','rightClickCommand','keyCommand','_offSetPos','_offsetY','_rect','pidle')
-  def __init__(self,pos,xlen,ylen,OnDownCommand,down_color,up_color,idle_color,text:Surface|str = Surface((0,0)),textx:int = 0,texty:int = 0,rightClickCommand:function|None = None,key:str|None = None,accepts_mb3:bool = False, OnUpCommand:function|None = None,keyCommand:str = 'OnDownCommand',text_color:tuple = (0,0,0)):
+  def __init__(self,pos,xlen,ylen,OnDownCommand,down_color,up_color,idle_color,text:Surface|str = Surface((0,0)),textx:int = 0,texty:int = 0,rightClickCommand:Callable|None = None,key:str|None = None,accepts_mb3:bool = False, OnUpCommand:Callable|None = None,keyCommand:str = 'OnDownCommand',text_color:tuple = (0,0,0)):
     self.x = pos[0]
     self.y = pos[1]
     self.xlen = xlen
@@ -1359,7 +1343,7 @@ class GridComponent:
 
 
 class MiniWindow:
-  def __init__(self,name,pos,size,color =(70,70,70),exit_command:function = lambda:1,force_focus:bool = True):
+  def __init__(self,name,pos,size,color =(70,70,70),exit_command:Callable = lambda:1,force_focus:bool = True):
     self._offset = tuple(pos)
     self._size = tuple(size)
     if self._size[1] < 100: raise TypeError("Cannot Make A MiniWindow smaller than 100y ")
@@ -1542,13 +1526,13 @@ class Window_Space:
       
   
 
-    def addMiniWindow(self,name:str,pos:tuple,size:tuple,bg_color=None,exit_command:function|None=None,force_focus:bool = True) -> None:
+    def addMiniWindow(self,name:str,pos:tuple,size:tuple,bg_color=None,exit_command:Callable|None=None,force_focus:bool = True) -> None:
       if bg_color == None:
         bg_color = (70,70,70)
       if exit_command == None:
         exit_command = self.deactivateMiniWindow
       self._miniWindows[name] = MiniWindow(name,pos,size,bg_color,exit_command,force_focus)
-    def activateMiniWindow(self,name,passFunc:bool = 0) -> None|function:
+    def activateMiniWindow(self,name,passFunc:bool = 0) -> None|Callable:
       if passFunc: return lambda :self.activateMiniWindow(name)
       assert name in self._miniWindows.keys(), "That miniwindow does not exist"
       #if not name in self._miniWindows.keys(): raise TypeError('That miniwindow does not exist')
@@ -2317,15 +2301,15 @@ def onSoundLoad():
 def onSoundPlay():
   pass
 
-def setOnSoundLoad(func:function) -> None:
+def setOnSoundLoad(func:Callable) -> None:
   global onSoundLoad
   onSoundLoad = func
 
-def setOnSoundPlay(func:function) -> None:
+def setOnSoundPlay(func:Callable) -> None:
   global onSoundPlay
   onSoundPlay = func
 
-def setSoundEndEvent(func:function):
+def setSoundEndEvent(func:Callable):
   global endEventFunction
   endEventFunction = func
 
