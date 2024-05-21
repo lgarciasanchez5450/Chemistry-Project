@@ -915,6 +915,8 @@ class InputBox:
     self.chars = len(new_text)
     self.text = new_text
     self.save_function(self.text)
+    self.cursor_rect = Rect(self.pos[0]+ (self.chars%self.max_chars_per_line)*self.character_x + self._offSetPos[0]+2,self.pos[1]+(self.chars//self.max_chars_per_line)*self.character_y + self._offSetPos[1]+2,3,self.character_y-3)
+
     
   def set_text_no_save(self,new_text:str) -> None:
     assert isinstance(new_text,str), "argument <new_text> must be of type <str>"
@@ -923,14 +925,13 @@ class InputBox:
     self.text = new_text
   
   def check_keys(self,key):
-    if self.active and self.restrict_input and key in self.restrict_input:
-      if key == back_unicode:
-        if self.text:  #if self.text has any thing in it  
-          self.text = self.text[:-1]
-          self.chars -= 1
-          self.save_function(self.text)
-          return
-      elif self.chars < self.max_chars: #has not reached max characters yet
+    if key == back_unicode and self.text:  #if self.text has any thing in it  
+      self.text = self.text[:-1]
+      self.chars -= 1
+      self.save_function(self.text)
+      return
+    if self.active and (self.restrict_input is None or key in self.restrict_input ):
+      if self.chars < self.max_chars: #has not reached max characters yet
         if key == '\r':
           self.text += '\n'
         else:
@@ -941,6 +942,7 @@ class InputBox:
   def update(self,things):
     '''mpos,mb1down,keys'''
     mpos,mb1down,keys = things
+    global inputBoxSelected
     if self.textRect.collidepoint(mpos):
       if mb1down:
         self.active = True
@@ -948,7 +950,6 @@ class InputBox:
     else:
       if mb1down:
         self.active = False
-    global inputBoxSelected
     if self.active:
       thingy = self.text
       inputBoxSelected = True
@@ -1021,6 +1022,8 @@ class RoundButton:
         return    
       self.down = False
       self.OnUpCommand()
+    
+    setToUp = SetUp
 
     def draw(self):
         if self.down:
@@ -1061,6 +1064,9 @@ class ButtonSwitch:
     self.size = size
     self.state = start_state
     self.state_pics = state_pics
+
+  def setToUp(self):
+    pass
 
   def update(self,things):
     mpos,mb1 = things
@@ -1198,6 +1204,8 @@ class Button:
     self.previous_state = False
     self.idle_color = idle_color
     self.text = text
+    if isinstance(text,str):
+      self.strtext = text
     self.textx = textx
     self.texty = texty
     self.idle = False
@@ -1295,6 +1303,7 @@ class GridComponent:
     self.y = pos[1]
     self.cellsWidth,self.cellsHeight = cells
     self.buttons:list[Button|None] = [None for i in range(cells[1]*cells[0])]
+    self.actives:list[bool] =[False] * len(self.buttons)
     self.offSetPos = (0,0)
     self.cellSize = cellSize
     self.spacing = 0
@@ -1313,11 +1322,20 @@ class GridComponent:
       if button is not None:
         button.offSetPos = (val[0]+self.x,val[1]+self.y)
     self._offSetPos = val
+
+  def setActive(self,pos:tuple[int,int],active:bool):
+    i = self._xyToIndex(pos[0],pos[1])
+    self.setActiveIndex(i,active)
   
+  def setActiveIndex(self,index:int,active:bool):
+    if index < 0: return;
+    self.actives[index] = active
+    if not index: 
+      self.buttons[index].setToUp()
   def update(self,thing):
     '''mpos,mb1down,mb3down,KDQueue,mb1up'''
-    for button in self.buttons:
-      if button is not None:
+    for button,active in zip(self.buttons,self.actives):
+      if button is not None and active: 
         button.update(thing)
 
   def _xyToIndex(self,x:int,y:int):
@@ -1334,11 +1352,12 @@ class GridComponent:
     button.ylen = self.cellSize[1]
     button.recalcBounds()
     self.buttons[index] = button
+    self.actives[index] = True
 
   
   def draw(self) -> None:
-    for button in self.buttons:
-      if button is not None: 
+    for button,active in zip(self.buttons,self.actives):
+      if button is not None and active: 
         button.draw()
 
 
@@ -1511,6 +1530,7 @@ class Window_Space:
       self._mainSpaces = []
       self._mainSpace = None
       self._activeMainSpace = 0
+      self._prev_active_ms = 0
       self._mainSpacePos = [0,0]
       self._mainSpaceSize = [WIDTH,HEIGHT]
       self._borders = {"top":None,"bottom":None,"left":None,"right":None}  
@@ -1618,17 +1638,18 @@ class Window_Space:
     @mainSpace.setter
     def mainSpace(self, newVal:int | Main_Space) -> None:
       if isinstance(newVal,int):
-        self._activeMainSpace = newVal
-        self._currentMS = self._mainSpaces[newVal]
+        if (newVal != self._activeMainSpace): 
+          self._prev_active_ms  = self._activeMainSpace
+          self._activeMainSpace = newVal
+          self._currentMS = self._mainSpaces[newVal]
       elif isinstance(newVal,ScrollingMS):
+        self._prev_active_ms = self._activeMainSpace
         self._mainSpaces.append(newVal)
         self._activeMainSpace = len(self._mainSpaces)-1
         self._currentMS = self._mainSpaces[-1]
       else:
         return
       self._update_mainspace()
-      #self._currentMS.draw()
-      #display.update(self._msRect)
 
     def addMainSpace(self,newMS:Main_Space) -> None:
       self._mainSpaces.append(newMS)
@@ -1640,10 +1661,21 @@ class Window_Space:
       self._debug = Debug(performanceImpact=impact)
     
     def setActiveMainSpace(self,newVal:int) -> None:
+      if (self._activeMainSpace == newVal): return
+      self._prev_active_ms = self._activeMainSpace
       self._activeMainSpace = newVal
       self._currentMS = self._mainSpaces[newVal]
       self._currentMS.draw()
       display.update(self._msRect)
+
+    def toggleOrPreviousActiveMainSpace(self,index:int,passFunc:bool=True):
+      if passFunc: return lambda : self.toggleOrPreviousActiveMainSpace(index,False)
+      if (self._activeMainSpace == index):
+        self.setActiveMainSpace(self._prev_active_ms)
+      else:
+        self.setActiveMainSpace(index)
+
+
     
     def emptyMainSpace(self,num:int) -> None:
       for var in self._mainSpaces[num].__dict__:
@@ -1891,7 +1923,8 @@ class Left_Border(Border):
         for object in self.__dict__:
           if object[0] != '_':
             obj = self.__dict__[object]
-            if isinstance(obj,Button):
+            if isinstance(obj,(Button, ButtonSwitch,RoundButton)):
+
               obj.setToUp()
               obj.draw()
             elif isinstance(obj,Dropdown):
