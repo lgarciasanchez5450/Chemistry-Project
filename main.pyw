@@ -35,7 +35,6 @@ def checkRowsAndColsCompleted(row,col):
         for x in range(18):
             button,active = game_ptable.getAt(x,row)
             if button is not None and not active:
-                print('breaking at', button, active)
                 break
         else:
             b = game_ptable.getAt(col,row)[0]
@@ -62,9 +61,8 @@ def checkRowsAndColsCompleted(row,col):
             assert b is not None
             x = b.x + SQUARE_SIZE/2
 
-            print('uh oh',x)
+            
             from random import random
-            print()
             for i in range(colSize[col]*10):
                 particle_manager.addParticle(random()*2+3,
                                              random()*3+1,
@@ -148,7 +146,6 @@ for element in dataLoader.getAllElementsData():
         game_ptable.addButton(xy,b)
         game_ptable.setActive(xy,False)
     except Exception as err:
-        print(err)
         pass
 
 c = resizeSurfaceSmooth(loadImg('./Assets/Images/info-button.png',True,False),(40,40))
