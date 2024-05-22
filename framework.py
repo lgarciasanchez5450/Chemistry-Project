@@ -8,6 +8,7 @@ Notes Application (trashy)
 '''
 # speedup by making <accepts> classmethod into an attribute because its almost four times as fast to access.!!! TODO TODO TODO TODO TODO
 import threading, time
+import numpy as np
 from typing import Callable,Any
 from pygame import gfxdraw
 from math import sqrt, cos, sin, hypot,atan2,pi,acos,e,exp
@@ -1326,12 +1327,18 @@ class GridComponent:
   def setActive(self,pos:tuple[int,int],active:bool):
     i = self._xyToIndex(pos[0],pos[1])
     self.setActiveIndex(i,active)
+
   
   def setActiveIndex(self,index:int,active:bool):
-    if index < 0: return;
+    if index < 0: return
     self.actives[index] = active
     if not index: 
       self.buttons[index].setToUp()
+
+  def getAt(self,x:int,y:int) -> tuple[Button|None,bool]:
+    i = self._xyToIndex(x,y)
+    return self.buttons[i],self.actives[i]
+
   def update(self,thing):
     '''mpos,mb1down,mb3down,KDQueue,mb1up'''
     for button,active in zip(self.buttons,self.actives):
@@ -1340,6 +1347,9 @@ class GridComponent:
 
   def _xyToIndex(self,x:int,y:int):
     return x + y * self.cellsWidth
+  
+  def _indexToXY(self,i:int) -> tuple[int,int]:
+    return i%self.cellsWidth,i//self.cellsWidth
     
   def addButton(self,pos:tuple[int,int],button:Button):
     x,y = pos
@@ -1359,6 +1369,66 @@ class GridComponent:
     for button,active in zip(self.buttons,self.actives):
       if button is not None and active: 
         button.draw()
+
+class ParticleManager:    
+  @staticmethod
+  def accepts():
+    return tuple()
+  def __init__(self,default_color =(70,70,70),particle_amount:int=100):
+    self.d_color = default_color
+    self.offSetPos = (0,0)
+    self.p_amount = particle_amount
+    self.clear()
+
+
+  def clear(self):
+    self.p_s = np.zeros((self.p_amount,2),dtype = np.float32)
+    self.p_v = np.zeros((self.p_amount,2),dtype = np.float32)
+    self.p_a = np.zeros((self.p_amount,2),dtype = np.float32)
+    self.p_rad = np.zeros(self.p_amount,dtype = np.float32)
+    self.p_color = np.zeros((self.p_amount,3),dtype = np.uint8)
+    self.p_t = np.zeros(self.p_amount,dtype = np.float32)
+    self.particles = 0
+
+  def addParticle(self,time:float,rad:float,color:tuple[int,int,int],pos:tuple[int,int],vel:tuple[int,int],accel:tuple[int,int]= (0,0)):
+    i = self.particles
+    if i == self.p_amount: return print('returning')
+    
+    self.p_s[i][:] = pos
+    self.p_v[i][:] = vel
+    self.p_a[i] = accel
+    self.p_rad[i] = rad
+    self.p_color[i] = color
+    self.p_t[i] = time
+    self.particles +=1
+
+
+  def update(self,_):
+    if self.particles == 0: return
+    self.p_t -= dt * 0.001
+    self.p_s += self.p_v * dt * 0.001
+    self.p_v += self.p_a * dt * 0.001
+
+    if (np.all(self.p_t <= 0)):
+      print('clearing')
+      self.clear()
+
+  def draw(self):
+    offset = np.array(self.offSetPos)
+
+
+    for i in range(self.particles):
+      if (self.p_t[i] < 0):continue
+      draw.circle(screen,self.p_color[i],self.p_s[i]+offset,float(self.p_rad[i]))
+
+    
+    
+    
+
+
+    
+
+
 
 
 class MiniWindow:
@@ -2180,6 +2250,7 @@ class ScrollingMS(Main_Space):
     def draw(self):
       draw.rect(screen,self._background_color,self._rect)
       for obj in self._Screen_Objects:
+          #print(type(obj))
           obj.draw()
 #print("BIG SAVINGS ON BEING ABLE TO PASS IN .accepts RETURN VALUE DIRECTLY INTO <Input> CLASS TO LOWER FUNC CALLS!!")
 class SpaceMS(Main_Space):

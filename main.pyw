@@ -1,4 +1,3 @@
-from typing import Text
 from framework import *
 import framework
 import colors as color
@@ -22,6 +21,59 @@ window_space = Window_Space()
 window_space.addBorder("left",50,color.grey,2)
 game = window_space.mainSpace = ScrollingMS()
 current_guess = ''
+def checkRowsAndColsCompleted(row,col):
+    colStarts = [
+        0,SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,3*SQUARE_SIZE,SQUARE_SIZE,SQUARE_SIZE,SQUARE_SIZE,SQUARE_SIZE,SQUARE_SIZE,0
+    ]
+    colSize = [
+        7,6,2,4,4,4,4,4,4,4,4,4,6,6,6,6,6,7
+    ]
+
+    
+    checkRow = row in (7,8)
+    if checkRow:
+        for x in range(18):
+            button,active = game_ptable.getAt(x,row)
+            if button is not None and not active:
+                print('breaking at', button, active)
+                break
+        else:
+            b = game_ptable.getAt(col,row)[0]
+            assert b is not None
+            y = b.y + SQUARE_SIZE/2
+            from random import random
+            for i in range(13*7):
+                particle_manager.addParticle(random()*2+3,
+                                             random()*3+1,
+                                             (int(random()*255),int(random()*255),int(random()*255)),
+                                             (2*SQUARE_SIZE+i*SQUARE_SIZE/7,y + random()*SQUARE_SIZE-SQUARE_SIZE/2+6),
+                                             (random()*10-5,-25-random()*25),
+                                             (0,130))
+
+
+    else:    
+        for y in range(7):
+            button,active = game_ptable.getAt(col,y)
+            if button is not None and not active:
+                break
+
+        else:
+            b = game_ptable.getAt(col,row)[0]
+            assert b is not None
+            x = b.x + SQUARE_SIZE/2
+
+            print('uh oh',x)
+            from random import random
+            print()
+            for i in range(colSize[col]*10):
+                particle_manager.addParticle(random()*2+3,
+                                             random()*3+1,
+                                             (int(random()*255),int(random()*255),int(random()*255)),
+                                             (x + random()*SQUARE_SIZE-SQUARE_SIZE/2+6,i*SQUARE_SIZE/10+colStarts[col]+2),
+                                             (random()*10-5,-25-random()*25),
+                                             (0,130))
+
+
 def guessCurrent():
     global current_guess
     for button,active,i in zip(game_ptable.buttons,game_ptable.actives,range(200)):
@@ -31,14 +83,17 @@ def guessCurrent():
                 game_ptable.setActiveIndex(i,True)
                 gameInput.set_text("")
                 game_score.setText(f"{game_ptable.actives.count(True)}/118")
+                checkRowsAndColsCompleted(*(game_ptable._indexToXY(i)[::-1]))
 
 
 game.set_background_color((90,90,90))
-game_ptable = game.ptable = GridComponent((10,10),(18,9),(SQUARE_SIZE,SQUARE_SIZE)).setSpacing(2)
+game_ptable = game.ptable = GridComponent((10,10),(18,10),(SQUARE_SIZE,SQUARE_SIZE)).setSpacing(2)
 gameInput = game.input1 = InputBox((10,framework.HEIGHT-40),(200,25),'Atomic Symbol:',color.grey,5,(lambda x: globals().update(current_guess=x)),allLetters)
 submit_surf = makeFont('monospace',30,True).render(">",True,'black')
 game_score= game.game_score = TextBox((250,framework.HEIGHT-40),makeFont('Arial',20,False),'0/118','black')
 game.submit_button = Button((215,framework.HEIGHT-40),25,25,guessCurrent,color.dark_light_grey,color.dark_light_grey,color.grey,submit_surf,2,-4,key=enter_unicode)
+particle_manager = game.pm = ParticleManager()
+
 addKeysThatIgnore(enter_unicode)
 credits = window_space.mainSpace = ScrollingMS()
 credits.text = TextBox((5,5),makeFont('Arial',20),  'Credits:','white')
@@ -46,7 +101,7 @@ credits.text1 = TextBox((5,30),makeFont('Arial',20),'   Application Designer / D
 credits.text2 = TextBox((5,55),makeFont('Arial',20),'   Researcher / Taste Tester - Zackary Cantu','white')
 ms1 = window_space.mainSpace = ScrollingMS()
 ms1.set_background_color((90,90,90))
-ms1.periodic_table = ptable = GridComponent((10,10),(18,9),(SQUARE_SIZE,SQUARE_SIZE)).setSpacing(2)
+ms1.periodic_table = ptable = GridComponent((10,10),(18,10),(SQUARE_SIZE,SQUARE_SIZE)).setSpacing(2)
 for element in dataLoader.getAllElementsData():
     bg_color = Color(*element.getBGColor())
     txt_color = Color(*element.getTextColor())
@@ -79,7 +134,7 @@ for element in dataLoader.getAllElementsData():
     row = element.period()
     if isinstance(col,str):
         col = col.strip().casefold()
-        row += 2
+        row += 3
         if col == "Lanthanides".casefold():
             col = element.atomicNumber() - 54
         elif col == "Actinides".casefold():
@@ -92,7 +147,8 @@ for element in dataLoader.getAllElementsData():
         ptable.addButton(xy,b)
         game_ptable.addButton(xy,b)
         game_ptable.setActive(xy,False)
-    except:
+    except Exception as err:
+        print(err)
         pass
 
 c = resizeSurfaceSmooth(loadImg('./Assets/Images/info-button.png',True,False),(40,40))
